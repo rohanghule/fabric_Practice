@@ -1,0 +1,165 @@
+KW_Count_Test = 
+VAR SelectedDomain = SELECTEDVALUE(Dim_Domain[Domain])
+
+-- 🔹 Numerator (Top 10 based on selected domain)
+RETURN
+    SWITCH(
+        SelectedDomain,
+
+       "Dell",
+        CALCULATE(
+            DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+            NOT ISBLANK('SoV_Generic_Data'[www.dell.com/en-us: Position]),
+            'SoV_Generic_Data'[www.dell.com/en-us: Position] <= 10
+        ),
+
+        "HP",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[hp.com/us-en/home.html: Position]),
+                'SoV_Generic_Data'[hp.com/us-en/home.html: Position] <= 10
+            ),
+
+    "Lenovo",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[lenovo.com/us/en/: Position]),
+                'SoV_Generic_Data'[lenovo.com/us/en/: Position] <= 10
+            ),
+
+    "Asus",
+         CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[asus.com/: Position]),
+                'SoV_Generic_Data'[asus.com/: Position] <= 10
+            ),
+
+    "Acer",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[acer.com/: Position]),
+                'SoV_Generic_Data'[acer.com/: Position] <= 10
+            ),
+
+    "Apple",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[apple.com/: Position]),
+                'SoV_Generic_Data'[apple.com/: Position] <= 10
+            ),
+
+    "IBM",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[ibm.com/: Position]),
+                'SoV_Generic_Data'[ibm.com/: Position] <= 10
+            ),
+
+    "Microsoft",
+         CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[microsoft.com/: Position]),
+                'SoV_Generic_Data'[microsoft.com/: Position] <= 10
+            ),
+
+        "BestBuy",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[www.bestbuy.com/: Position]),
+                'SoV_Generic_Data'[www.bestbuy.com/: Position] <= 10
+            ),
+
+    "Amazon",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[www.amazon.com/: Position]),
+                'SoV_Generic_Data'[www.amazon.com/: Position] <= 10
+            ),
+
+    "Samsung",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[www.samsung.com/br/: Position]),
+                'SoV_Generic_Data'[www.samsung.com/br/: Position] <= 10
+            ),
+
+    "Kabum",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[www.kabum.com.br/: Position]),
+                'SoV_Generic_Data'[www.kabum.com.br/: Position] <= 10
+            ),
+
+    "Casasbahia",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[www.casasbahia.com.br/: Position]),
+                'SoV_Generic_Data'[www.casasbahia.com.br/: Position] <= 10
+            ),
+
+    "Argos",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[www.argos.co.uk/: Position]),
+                'SoV_Generic_Data'[www.argos.co.uk/: Position] <= 10
+            ),
+
+    "Currys",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[www.currys.co.uk/: Position]),
+                'SoV_Generic_Data'[www.currys.co.uk/: Position] <= 10
+            ),
+
+    "Mediamarkt",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[www.mediamarkt.de/: Position]),
+                'SoV_Generic_Data'[www.mediamarkt.de/: Position] <= 10
+            ),
+
+    "Razer",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[www.razer.com/de-de: Position]),
+                'SoV_Generic_Data'[www.razer.com/de-de: Position] <= 10
+            ),
+
+    "Notbooksbilliger",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[www.notebooksbilliger.de/: Position]),
+                'SoV_Generic_Data'[www.notebooksbilliger.de/: Position] <= 10
+            ),
+
+    "Fnac",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[www.fnac.com/: Position]),
+                'SoV_Generic_Data'[www.fnac.com/: Position] <= 10
+            ),
+
+    "Boulanger",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[www.boulanger.com/: Position]),
+                'SoV_Generic_Data'[www.boulanger.com/: Position] <= 10
+            ),
+
+    "Darty",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[www.darty.com/: Position]),
+                'SoV_Generic_Data'[www.darty.com/: Position] <= 10
+            ),
+
+    "Cdiscount",
+        CALCULATE(
+                DISTINCTCOUNT('SoV_Generic_Data'[Keyword]),
+                NOT ISBLANK('SoV_Generic_Data'[www.cdiscount.com/: Position]),
+                'SoV_Generic_Data'[www.cdiscount.com/: Position] <= 10
+            )
+
+    )
+
+-- 🔹 Denominator (Total keywords for selected Month + Tag)
